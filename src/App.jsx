@@ -2,7 +2,7 @@
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>Weather Now</div>
   )
 }
 
