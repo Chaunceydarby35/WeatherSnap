@@ -5,9 +5,19 @@ import snowy from '../assets/Images/snowy.png'
 
 
 const WeatherSnap = () => {
+  const api_key = '89df08937497ece00d98b380ad476e7f'
+  
+  const search = () => {
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=89df08937497ece00d98b380ad476e7f "
+  }
+
   return (
+  
     <div className="container">
       <div className="weather-snap">
+      <div>
+        <h1>Get Your Forecast here!</h1>
+       </div>
         <div className="search">
           <div className="search-top">
             <i className="fa-solid fa-location-dot"></i>
