@@ -1,12 +1,11 @@
-// eslint-disable-next-line no-unused-vars
-import WeatherSnap from "./components/WeatherSnap"
+import WeatherSnap from "./components/WeatherSnap.jsx"
 import "./components/WeatherSnap.css"
-
-
 
 const App = () => {
   return (
-    <div>Weather Snap</div>
+    <div>
+      <WeatherSnap/>
+    </div>
   )
 }
 
