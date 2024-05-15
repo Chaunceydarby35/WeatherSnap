@@ -8,7 +8,7 @@ const WeatherSnap = () => {
   const api_key = '89df08937497ece00d98b380ad476e7f'
   
   const search = () => {
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=89df08937497ece00d98b380ad476e7f "
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=89df08937497ece00d98b380ad476e7f"
   }
 
   return (
