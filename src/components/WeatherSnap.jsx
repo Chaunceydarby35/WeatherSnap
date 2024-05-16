@@ -58,7 +58,7 @@ const WeatherSnap = () => {
         </div>
         <div className="weather">
           <img src={sunny} alt="Sunny" />
-          <div className="weather-type">Clear</div>
+          <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
           <div className="temp">{data.main ? `${Math.floor(data.main.temp)}`: null}</div>
         </div>
         <div className="weather-date">
