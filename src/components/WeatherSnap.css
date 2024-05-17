@@ -25,6 +25,11 @@
     position: relative;
   }
   
+  .weather-snap h1{
+    font-family: 'Lilita One';
+    font-weight: lighter;
+  }
+  
   .search {
     display: flex;
     flex-direction: column;

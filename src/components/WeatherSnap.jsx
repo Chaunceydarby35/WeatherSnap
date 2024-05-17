@@ -73,9 +73,14 @@ const backgroundImage = data.weather
   return (
   
     <div className="container" style={{backgroundImage}}>
-      <div className="weather-snap" style={{backgroundImage}}>
+      <div className="weather-snap" style={{
+        backgroundImage:
+        backgroundImage && backgroundImage.replace 
+        ? backgroundImage.replace('to right', 'to top')
+        : null
+        }}>
       <div>
-        <h1>Get Your Forecast here!</h1>
+        <h1>WeatherSnap Forecast</h1>
        </div>
         <div className="search">
           <div className="search-top">
