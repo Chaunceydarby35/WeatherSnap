@@ -59,7 +59,7 @@ const WeatherSnap = () => {
         <div className="weather">
           <img src={sunny} alt="Sunny" />
           <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
-          <div className="temp">{data.main ? `${Math.floor(data.main.temp)}`: null}°</div>
+          <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°`: null}</div>
         </div>
         <div className="weather-date">
           <p>Wed, 15 May</p>
@@ -73,7 +73,7 @@ const WeatherSnap = () => {
           <div className="Wind">
             <div className="data-name">Wind</div>
             <i className="fa-solid fa-wind"></i>
-            <div className="data">3 km/h</div>
+            <div className="data">{data.wind ? data.wind.speed : null} km/h</div>
           </div>
         </div>
       </div>
