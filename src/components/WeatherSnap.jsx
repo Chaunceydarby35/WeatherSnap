@@ -2,21 +2,25 @@ import sunny from '../assets/Images/sunny.png'
 import cloudy from '../assets/Images/cloudy.png'
 import rainy from '../assets/Images/rainy.png'
 import snowy from '../assets/Images/snowy.png'
+import loadingGif from "../assets/Images/loading.gif"
 import { useEffect, useState } from 'react'
 
 
 const WeatherSnap = () => {
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
+  const [loading, setLoading] = useState(false)
   const api_key = '89df08937497ece00d98b380ad476e7f'
 
   useEffect (() => {
     const fetchDefaultWeather = async () => {
+      setLoading (true)
       const defaultLocation = "Madrid"
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${defaultLocation}&units=Metric&appid=${api_key}`
       const res = await fetch(url)
       const defaultData = await res.json()
       setData(defaultData)
+      setLoading (false)
     }
 
     fetchDefaultWeather()
@@ -36,6 +40,7 @@ const WeatherSnap = () => {
       } else {
         setData(searchData)
         setLocation('')
+        setLoading(false)
       }
     }
   }
@@ -109,7 +114,7 @@ const formattedDate = `${dayOfWeek}, ${month}, ${dayOfMonth}`
             onClick={search}></i>
           </div>
         </div>
-        {data.notFound ? (<div className='not-found'>Not 
+        { loading ? (<img className='loader' src={loadingGif} alt='loading'/>) : data.notFound ? (<div className='not-found'>Not 
         Found 😞</div>) : (
           <><div className="weather">
           <img src={weatherImage} alt="WeatherImage" />
