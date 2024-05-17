@@ -31,9 +31,12 @@ const WeatherSnap = () => {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=Metric&appid=${api_key}`
       const res = await fetch(url)
       const searchData = await res.json()
-      console.log(searchData)
-      setData(searchData)
-      setLocation('')
+      if (searchData.cod !== 200) {
+        setData({notFound: true})
+      } else {
+        setData(searchData)
+        setLocation('')
+      }
     }
   }
 
@@ -106,7 +109,9 @@ const formattedDate = `${dayOfWeek}, ${month}, ${dayOfMonth}`
             onClick={search}></i>
           </div>
         </div>
-        <div className="weather">
+        {data.notFound ? (<div className='not-found'>Not 
+        Found 😞</div>) : (
+          <><div className="weather">
           <img src={weatherImage} alt="WeatherImage" />
           <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
           <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°`: null}</div>
@@ -125,7 +130,8 @@ const formattedDate = `${dayOfWeek}, ${month}, ${dayOfMonth}`
             <i className="fa-solid fa-wind"></i>
             <div className="data">{data.wind ? data.wind.speed : null} km/h</div>
           </div>
-        </div>
+        </div></>
+        )}
       </div>
     </div>
   )
