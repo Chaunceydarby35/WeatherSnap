@@ -44,8 +44,16 @@ const WeatherSnap = () => {
   }
 
 
+const weatherImages = {
+  Clear: sunny,
+  Clouds: cloudy,
+  Rain: rainy,
+  Snow : snowy,
+  Haze: cloudy,
+  Mist: cloudy,
+}
 
-
+const weatherImages = data.weather ? weatherImages[data.weather[0].main] : null
 
 
 
@@ -71,7 +79,7 @@ const WeatherSnap = () => {
           </div>
         </div>
         <div className="weather">
-          <img src={sunny} alt="Sunny" />
+          <img src={weatherImages} alt="weatherImages" />
           <div className="weather-type">{data.weather ? data.weather[0].main : null}</div>
           <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°`: null}</div>
         </div>
