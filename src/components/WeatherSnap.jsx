@@ -69,6 +69,13 @@ const backgroundImages = {
 const backgroundImage = data.weather 
 ? backgroundImages[data.weather[0].main] : 'linear-gradient(to right, #f3b07c, #fcd283)'
 
+const currentDate = new Date()
+
+const daysOfWeek = ["Sun","Mon","Tues","Weds","Thurs","Fri","Sat"]
+
+const months = [
+  
+]
 
   return (
   
