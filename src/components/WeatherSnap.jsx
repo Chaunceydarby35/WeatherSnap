@@ -75,11 +75,11 @@ const daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday",
 
 const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
-const dayOfWeek = daysOfWeek[currentDate.getDate()]
+const dayOfWeek = daysOfWeek[currentDate.getDay()]
 const month = months[currentDate.getMonth()]
 const dayOfMonth = currentDate.getDate()
 
-const formattedDate = `${month},${dayOfMonth},${dayOfWeek}`
+const formattedDate = `${dayOfWeek}, ${month}, ${dayOfMonth}`
 
   return (
   
