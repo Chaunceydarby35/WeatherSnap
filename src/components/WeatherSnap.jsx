@@ -71,11 +71,11 @@ const backgroundImage = data.weather
 
 const currentDate = new Date()
 
-const daysOfWeek = ["Sun","Mon","Tues","Weds","Thurs","Fri","Sat"]
+const daysOfWeek = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
 
-const months = [
-  
-]
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+
 
   return (
   
