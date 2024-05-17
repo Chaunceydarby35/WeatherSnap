@@ -71,11 +71,15 @@ const backgroundImage = data.weather
 
 const currentDate = new Date()
 
-const daysOfWeek = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+const daysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
 const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 
+const dayOfWeek = daysOfWeek[currentDate.getDate()]
+const month = months[currentDate.getMonth()]
+const dayOfMonth = currentDate.getDate()
 
+const formattedDate = `${month},${dayOfMonth},${dayOfWeek}`
 
   return (
   
@@ -108,7 +112,7 @@ const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov
           <div className="temp">{data.main ? `${Math.floor(data.main.temp)}°`: null}</div>
         </div>
         <div className="weather-date">
-          <p>Wed, 15 May</p>
+          <p>{formattedDate}</p>
         </div>
         <div className="weather-data">
           <div className="humidity">
