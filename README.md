@@ -27,6 +27,7 @@ WeatherSnap is a web application that allows users to check the current weather 
 
 ### Credits:
 - Weather data provided by OpenWeatherMap API
+- Code and Create for help and inspiration
 
 ### Feedback:
 If you have any feedback, suggestions, or issues to report, please feel free to reach out to Chauncey Lovell Darby at Chaunceydrb@gmail.com.
