@@ -24,6 +24,8 @@ WeatherSnap is a web application that allows users to check the current weather 
 - Implement additional weather data such as humidity, wind speed, and UV index
 - Add a feature for users to search for weather in different locations
 - Enhance the design for a more visually appealing experience
+- time
+- day and night functionality
 
 ### Credits:
 - Weather data provided by OpenWeatherMap API
